@@ -33,7 +33,7 @@ class App extends Component {
 
   render() {
     return (
-    <div className="App">
+    <div className="App-header">
       <h1>Stopwatch Champ</h1>
       <input onChange={event => this.setState({input: event.target.value})} />
       <div>{this.state.secondsleft}</div>
