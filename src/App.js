@@ -26,7 +26,11 @@ class App extends Component {
       this.setState({secondsleft: Math.floor(this.state.secondsremaining % 60)});
       this.setState({minutesleft: Math.floor(this.state.secondsremaining / 60)});
   }
-}
+    if (this.state.secondsleft === 1 && this.state.minutesleft === 0) {
+       alert("Time's up!")
+    }
+  }
+
 
   componentWillMount() {
     this.minusSeconds(this.state.secondsremaining, this.state.secondsleft, this.state.minutesleft);
